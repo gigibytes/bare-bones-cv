@@ -4,8 +4,8 @@ contacts:
   email: "janedoe@jd.net"
   phone: "555-555-5555"
   address: "Imaginary Place"
-  linkedin: "linkedin.com"
-  github: "github.com"
+  linkedin: "linkedin.com/in/janedoe"
+  github: "github.com/jd"
 
 skills:
   - name: Programming Languages

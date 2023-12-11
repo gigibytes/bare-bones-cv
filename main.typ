@@ -6,7 +6,7 @@
 #show heading: h => [
   #set text(
     size: eval(settings.font.size.heading_large),
-    font: settings.font.general
+    font: settings.font.display
   )
   #h
 ]
@@ -17,54 +17,19 @@
     #par[
       #set text(
         size: eval(settings.font.size.contacts),
-        font: settings.font.minor_highlight,
+        font: settings.font.basic,
       )
       
       Email: #link("mailto:" + configuration.contacts.email) \
       Phone: #link("tel:" + configuration.contacts.phone) \
-      LinkedIn: #link(configuration.contacts.linkedin)[mikhail-liamets] \
-      GitHub: #link(configuration.contacts.github)[caffeintazedgaze] \
+      LinkedIn: #link(configuration.contacts.linkedin) \
+      GitHub: #link(configuration.contacts.github) \
       
       #configuration.contacts.address
     ]
     #line(length: 100%)
   ]
-
-  = Summary
-
-  #par[
-    #set text(
-        eval(settings.font.size.education_description),
-        font: settings.font.minor_highlight,
-    )
-    An experienced *software engineer* with a confident grasp of *infrastructure*, *system design*, and *DevOps*, now seeking opportunities to excel in the realms of solution architecture.
-
-    Open to roles ranging from *software engineering* to *DevOps/SRE*.
-  ]
-
-  = Education
-
-  #{
-    for place in configuration.education [
-        #par[
-          #set text(
-            size: eval(settings.font.size.heading),
-            font: settings.font.general
-          )
-            #place.from – #place.to \
-            #link(place.university.link)[#place.university.name]
-        ]
-        #par[
-          #set text(
-            eval(settings.font.size.education_description),
-            font: settings.font.minor_highlight,
-          )
-          #place.degree #place.major \
-          #place.track track
-        ]
-    ]
-  }
-
+  
   = Skills
 
   #{
@@ -75,7 +40,7 @@
         )
         #set text(
           // size: eval(settings.font.size.tags),
-          font: settings.font.minor_highlight,
+          font: settings.font.basic,
         )
         *#skill.name* 
         #linebreak()
@@ -83,6 +48,30 @@
       ]
     ]
   }
+
+  = Education
+
+  #{
+    for place in configuration.education [
+        #par[
+          #set text(
+            size: eval(settings.font.size.heading),
+            font: settings.font.display
+          )
+            #place.from – #place.to \
+            #link(place.university.link)[#place.university.name]
+        ]
+        #par[
+          #set text(
+            eval(settings.font.size.education_description),
+            font: settings.font.basic,
+          )
+          #place.degree #place.major \
+          #place.track track
+        ]
+    ]
+  }
+
 ]}
 
 #let mainSection = {[
@@ -98,20 +87,19 @@
   #par[
     #set text(
       size: eval(settings.font.size.heading_huge),
-      font: settings.font.general,
+      font: settings.font.display,
     )
-    *#configuration.contacts.name*
+    *#configuration.contacts.name* | #configuration.contacts.title
   ]
-
+  
   #par[
     #set text(
-      size: eval(settings.font.size.heading),
-      font: settings.font.minor_highlight,
-      top-edge: 0pt
-    )  
-    #configuration.contacts.title
+        eval(settings.font.size.education_description),
+        font: settings.font.basic,
+    )
+    An experienced *software engineer*, open to roles ranging from *software engineering* to *DevOps/SRE*.
   ]
-
+  
   = Experience
 
   #{
@@ -119,7 +107,7 @@
       #par(justify: false)[
         #set text(
           size: eval(settings.font.size.heading),
-          font: settings.font.general
+          font: settings.font.display
         )
           #job.from – #job.to \
           
@@ -132,7 +120,7 @@
       )[
         #set text(
           size: eval(settings.font.size.description),
-          font: settings.font.general
+          font: settings.font.basic
         )
         #{
           for point in job.description [
@@ -146,7 +134,7 @@
       )[
         #set text(
           size: eval(settings.font.size.tags),
-          font: settings.font.minor_highlight
+          font: settings.font.basic
         )
         #{
           let tag_line = job.tags.join(" • ")
@@ -165,12 +153,12 @@
       #par(justify: false)[
         #set text(
           size: eval(settings.font.size.heading),
-          font: settings.font.general
+          font: settings.font.display
         )        
           *#project.project.name*
           #set text(
             size: eval(settings.font.size.description),
-            font: settings.font.general
+            font: settings.font.display
           )
           #link(project.project.link)[source]    
       ]
@@ -181,7 +169,7 @@
         #par[
           #set text(
             size: eval(settings.font.size.description),
-            font: settings.font.general
+            font: settings.font.basic
           )
           #project.description
         ]
@@ -191,7 +179,7 @@
       )[
         #set text(
           size: eval(settings.font.size.tags),
-          font: settings.font.minor_highlight
+          font: settings.font.basic
         )
         #{
           let tag_line = project.tags.join(" • ")
