@@ -6,9 +6,9 @@ My version of the template I forked from. Essentially just rearranged and made t
 
 1. Make an account on Typst
 2. Make a new project
-3. Import `main.typ` OR `main_certs.typ`, `settings.yaml`, and `configuration.yaml`
+3. Import `main.typ` OR `main_certs.typ`
+4. Import `settings.yaml`, and `configuration.yaml`
 
 Example:
 
 ![Example](images/example.png)
-
