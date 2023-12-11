@@ -22,8 +22,8 @@
       
       Email: #link("mailto:" + configuration.contacts.email) \
       Phone: #link("tel:" + configuration.contacts.phone) \
-      LinkedIn: #link(configuration.contacts.linkedin) \
-      GitHub: #link(configuration.contacts.github) \
+      LinkedIn: #link(configuration.contacts.linkedin)[janedoe] \
+      GitHub: #link(configuration.contacts.github)[janedoe] \
       
       #configuration.contacts.address
     ]
@@ -40,10 +40,14 @@
         )
         #set text(
           // size: eval(settings.font.size.tags),
-          font: settings.font.basic,
+          font: settings.font.display,
         )
         *#skill.name* 
         #linebreak()
+        #set text(
+          // size: eval(settings.font.size.tags),
+          font: settings.font.basic,
+        )
         #skill.items.join(" • ")
       ]
     ]
