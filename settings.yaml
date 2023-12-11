@@ -2,7 +2,7 @@ font:
   size:
     heading_huge: 18pt
     heading_large: 13pt
-    heading: 11pt
+    heading: 10pt
     description: 8pt
     tags: 8pt
     education_description: 8pt
