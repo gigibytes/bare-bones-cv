@@ -158,29 +158,46 @@
 
 
 
-  = Hackathons
+  = Projects
 
   #{
-    for hack in configuration.hackathons [
+    for project in configuration.projects [
+      #par(justify: false)[
+        #set text(
+          size: eval(settings.font.size.heading),
+          font: settings.font.general
+        )        
+          *#project.project.name*
+          #set text(
+            size: eval(settings.font.size.description),
+            font: settings.font.general
+          )
+          #link(project.project.link)[source]    
+      ]
       #par(
         justify: true,
         leading: eval(settings.paragraph.leading)
       )[
         #par[
           #set text(
-            size: eval(settings.font.size.heading),
-            font: settings.font.general
-          )
-          - #hack.year #hack.from – #hack.to \
-            #link(hack.hackathon.link)[#hack.hackathon.name] – #link(hack.certificate_link)[Credential]
-        ]
-        #par[
-          #set text(
             size: eval(settings.font.size.description),
             font: settings.font.general
           )
-          #hack.description
+          #project.description
         ]
+        #par(
+        justify: true,
+        leading: eval(settings.paragraph.leading),
+      )[
+        #set text(
+          size: eval(settings.font.size.tags),
+          font: settings.font.minor_highlight
+        )
+        #{
+          let tag_line = project.tags.join(" • ")
+          tag_line
+        }
+      ]
       ]
     ]
   }

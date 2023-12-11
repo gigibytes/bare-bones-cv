@@ -1,12 +1,11 @@
 contacts:
-  name: John Doe
-  title: Data Scientist
-  email: john.doe@email.com 
-  phone: "+123 456 7890"
-  address: "123 Imaginary Street, Imaginary City, Imaginary Country"
-  linkedin: "https://www.linkedin.com/in/mikhail-liamets/"
-  nationality: Imaginarian
-  github: "https://github.com/caffeinatedgaze/"
+  name: Jane Doe
+  title: Software Engineer
+  email: "janedoe@jd.net"
+  phone: "555-555-5555"
+  address: "Imaginary Place"
+  linkedin: "linkedin.com"
+  github: "github.com"
 
 skills:
   - name: Programming Languages
@@ -123,13 +122,12 @@ education:
     from: "2015"
     to: "2018"
 
-hackathons:
-  - hackathon:
-      name: Tech Innovators Hackathon
-      link: "https://techinnovatorshackathon.com/"
-    certificate_link: "https://techinnovatorshackathon.com/certificates/johndoe"
+projects:
+  - project:
+      name: A Project
+      link: ""
     description: >
-      Developed an innovative data analysis tool that improved data processing and insights generation for businesses.
-    year: 2023
-    from: "Feb. 1"
-    to: "Feb. 7"
+      A very impressive machine learning app.
+    tags:
+      - Python
+      - Something Else
