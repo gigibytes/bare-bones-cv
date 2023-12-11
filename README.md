@@ -1,11 +1,14 @@
 # Bare-bones Typst CV
 
-My version of the template I forked from. Essentially just rearranged and made two different versions.
+My version of the template I forked from. Essentially just rearranged and made two different versions. `main_certs.typ` has a section for certifications.
 
-## Versions
-1. No certification section.
-2. Does what it says on the tin; has a certification section.
+### How to use:
 
-## Screenshots
+1. Make an account on Typst
+2. Make a new project
+3. Import `main.typ` OR `main_certs.typ`, `settings.yaml`, and `configuration.yaml`
 
-TODO
+Example:
+
+![Example](images/example.png)
+
