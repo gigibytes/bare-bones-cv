@@ -1,20 +1,11 @@
 # Bare-bones Typst CV
 
-![Example](images/example.png)
+My version of the template I forked from. Essentially just rearranged and made two different versions.
 
-To generate `main.pdf` and watch for live changes, run
+## Versions
+1. No certification section.
+2. Does what it says on the tin; has a certification section.
 
-`typst watch main.typ`
+## Screenshots
 
-```bash
-________ Main content
-├── main.typ
-├── settings.yaml      # Spacing and font sizes
-└── configuration.yaml # Content
-
-________ Auxilary
-├── README.md
-├── main.pdf
-└── images
-   └── example.png
-```
+TODO

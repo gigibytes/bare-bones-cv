@@ -109,10 +109,9 @@
           size: eval(settings.font.size.heading),
           font: settings.font.display
         )
-          #job.from – #job.to \
           
           *#job.position*
-          #link(job.company.link)[\@  #job.company.name]    
+          #link(job.company.link)[\@  #job.company.name] | #job.from – #job.to
       ]
       #par(
         justify: false,
@@ -149,18 +148,13 @@
   = Projects
 
   #{
-    for project in configuration.projects [
+    for proj in configuration.projects [
       #par(justify: false)[
         #set text(
           size: eval(settings.font.size.heading),
           font: settings.font.display
         )        
-          *#project.project.name*
-          #set text(
-            size: eval(settings.font.size.description),
-            font: settings.font.display
-          )
-          #link(project.project.link)[source]    
+          *#link(proj.project.link)[#proj.project.name]*   
       ]
       #par(
         justify: true,
@@ -171,7 +165,7 @@
             size: eval(settings.font.size.description),
             font: settings.font.basic
           )
-          #project.description
+          #proj.description
         ]
         #par(
         justify: true,
@@ -182,7 +176,7 @@
           font: settings.font.basic
         )
         #{
-          let tag_line = project.tags.join(" • ")
+          let tag_line = proj.tags.join(" • ")
           tag_line
         }
       ]
@@ -194,7 +188,7 @@
 #{
   grid(
     columns: (2fr, 5fr),
-    column-gutter: 3em,
+    column-gutter: 2em,
     sidebarSection,
     mainSection,
   )
